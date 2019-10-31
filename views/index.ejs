@@ -3,14 +3,27 @@
     <head>
         <title>xml-p rss feed</title>
         <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body>
         <h1>feed success</h1>
-        <p>
-            <%- title %>
-        </p>
-        <p>
-            <%- link %>
-        </p>
+        <div class="header">
+            <p>
+                <%- title %>
+            </p>
+            <p>
+                <em><a href="<%- link %>"><%- link %></a></em>
+            </p>
+        </div>
+        <div  class="content">
+            <p>
+                <ul>
+                    <% articles.forEach(function(content){ %>
+                    <li>
+                        <a href="<%- content['link'] %>" target="_blank"><%- content['title'] %></a>
+                    </li>
+                    <% }); %>
+                </p>
+        </div>
     </body>
 </html>

@@ -1,0 +1,34 @@
+/* 
+ * index.css
+ * base feed styles
+*/
+
+h1 {
+    max-width: 15em;
+    border-bottom: 1px solid #000;
+}
+.header {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2em;
+}
+.content p:first-line{
+    text-transform: uppercase;
+}
+.content {
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+a:visited {
+    text-decoration: none;
+    color: #aaa;
+}
+a:hover {
+    color: #faa;
+}
+a:active {
+    color: #f00;
+}

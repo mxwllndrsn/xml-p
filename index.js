@@ -30,10 +30,11 @@ app.get('/', function(req, res){
 	parser.parseURL('http://aljazeera.com/xml/rss/all.xml', function(err, feed){
 		if(err) throw err;
 		console.log('Success: ', feed.title);
+		console.log(feed.items[0]);
 		res.render('index', {
 			title: feed.title,
-			link: feed.link
+			link: feed.link,
+			articles: feed.items
 		});
 	});
-
 });
