@@ -16,6 +16,6 @@ app.get('/', function(req, res){
 	console.log('GET \'/\'');
 	parser.parseURL('http://aljazeera.com/xml/rss/all.xml', function(err, feed){
 		if(err) throw err;
-		console.log(feed.title);
+		console.log('Success: ', feed.title);
 	});
 });
