@@ -9,7 +9,7 @@ const app = express();
 
 const Parser = require('rss-parser');
 const parser = new Parser();
-
+const feed = require('./config/feeds');
 
 // serve settings
 http.createServer(app).listen(8080);
@@ -27,7 +27,7 @@ app.set('view engine', 'ejs');
 // callbacks
 app.get('/', function(req, res){
 	console.log('GET \'/\'');
-	parser.parseURL('http://aljazeera.com/xml/rss/all.xml', function(err, feed){
+	parser.parseURL(feed.url, function(err, feed){
 		if(err) throw err;
 		console.log('Success: ', feed.title);
 		console.log(feed.items[0]);
