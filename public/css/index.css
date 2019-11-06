@@ -16,11 +16,19 @@ h1 {
 }
 .content {
     line-height: 1.5em;
+    max-width: 800px;
 }
 
 a {
     text-decoration: none;
     color: #222;
+}
+ul {
+    list-style: none;
+    outline: 1px solid rgba(0,0,255, 0.1);
+}
+li:nth-child(2n){
+    background-color: rgba(0,0,255, 0.1);
 }
 a:visited {
     text-decoration: none;
